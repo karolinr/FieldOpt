@@ -3,15 +3,16 @@ CONFIG += c++11
 
 # GTest has been omitted from the release
 SUBDIRS = \
-    ERTWrapper \
-    Model \
+    #ERTWrapper \
+    #Model \
     Utilities \
-    Optimization \
-    Simulation \
-    Runner \
-    WellIndexCalculator \
-    GTest \
-    AdgprsResultsReader
+    #Optimization \
+    #Simulation \
+    #Runner \
+    #WellIndexCalculator \
+    #GTest \
+    #AdgprsResultsReader \
+    FieldOptDriverGUI
 
 GTest.depends = ERTWrapper Utilities Model Optimization Simulation Runner AdgprsResultsReader
 Model.depends = ERTWrapper Utilities
@@ -19,6 +20,7 @@ Optimization.depends = Model Utilities Simulation
 Simulation.depends = Model Utilities AdgprsResultsReader
 Runner.depends = Optimization Model Utilities Simulation
 WellIndexCalculator.depends = Model
+FieldOptDriverGUI.depends = Utilities
 
 OTHER_FILES += \
     defaults.pri \
