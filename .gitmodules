@@ -4,6 +4,6 @@
 [submodule "FieldOpt/AdgprsSummaryConverter"]
 	path = FieldOpt/AdgprsSummaryConverter
 	url = git@github.com:PetroleumCyberneticsGroup/AdgprsSummaryConverter.git
-[submodule "FieldOptDriverGUI"]
-	path = FieldOptDriverGUI
+[submodule "FieldOpt/FieldOptDriverGUI"]
+	path = FieldOpt/FieldOptDriverGUI
 	url = https://github.com/karolinr/FieldOptDriverGUI.git
