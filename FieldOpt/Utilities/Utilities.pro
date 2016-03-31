@@ -17,6 +17,7 @@ HEADERS += \
     file_handling/filehandling_exceptions.h \
     unix/execution.h
 
+
 SOURCES += \
     settings/optimizer.cpp \
     settings/simulator.cpp \
@@ -24,6 +25,7 @@ SOURCES += \
     settings/settings.cpp \
     file_handling/filehandling.cpp \
     unix/execution.cpp
+
 
 DISTFILES += \
     README.md \
