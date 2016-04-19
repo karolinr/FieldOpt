@@ -53,13 +53,15 @@ public:
     Settings(QString driver_path, QString output_directory);
 
     QString driver_path() const { return driver_path_; }
-
+    void set_driver_path(const QString &driver_path) { driver_path_ = driver_path; } //!< Set the driver file path. Used when the path is passed by command line argument.
     QString name() const { return name_; } //!< The name to be used for the run. Output file and folder names are derived from this.
     void set_name(const QString &name){ name_ = name; } //!< Set name (used for the run)
     QString output_directory() const { return output_directory_; } //!< Path to a directory in which output files are to be placed.
+    void set_output_directory( const QString &output_directory) { output_directory_ = output_directory;}
     bool verbose() const { return verbose_; } //!< Verbose mode (with or without debug printing).
     void set_verbosity(const bool verbosity) { verbose_ = verbosity; }
     double bookkeeper_tolerance() const { return bookkeeper_tolerance_; } //!< Get the value for the bookkeeper tolerance. Used by the Bookkeeper in the Runner library.
+    void set_bookkeeper_tolerance(const double bookkeeper_tolerance){ bookkeeper_tolerance_ = bookkeeper_tolerance;}
 
     Model *model() const { return model_; } //!< Object containing model specific settings.
     Utilities::Settings::Optimizer *optimizer() const { return optimizer_; } //!< Object containing optimizer specific settings.
