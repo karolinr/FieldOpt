@@ -46,11 +46,14 @@ public:
     enum SimulatorType { ECLIPSE, ADGPRS };
 
     SimulatorType type() const { return type_; } //!< Get the simulator type (e.g. ECLIPSE).
+    void set_type(const SimulatorType type){ type_ = type; } //!< Set the simulator type
     QStringList *commands() const { return commands_; } //!< Get the simulator commands (commands used to execute a simulation). Each list element is executed in sequence.
     QString script_name() const { return script_name_; } //!< Get the name of the script to be used to execute simulations.
+    void set_script_name(const QString &script_name){ script_name_ = script_name;} //!< Get the name of the script to be used to execute simulations.
     QString driver_file_path() const { return driver_file_path_; } //!< Get the path to the driver file.
     void set_driver_file_path(const QString &path) { driver_file_path_ = path; } //!< Set the driver file path. Used when the path is passed by command line argument.
     QString output_directory() const { return output_directory_; } //!< Get the output directory path.
+    void set_output_directory( const QString &output_directory) { output_directory_ = output_directory;}
 
 private:
     Simulator(QJsonObject json_simulator);
