@@ -79,7 +79,7 @@ public:
 
     OptimizerType type() const { return type_; } //!< Get the Optimizer type (e.g. Compass).
     OptimizerMode mode() const { return mode_; } //!< Get the optimizer mode (maximize/minimize).
-    Parameters parameters() const { return parameters_; } //!< Get the optimizer parameters.
+    Parameters parameters() { return parameters_; } //!< Get the optimizer parameters.
     Objective objective() const { return objective_; } //!< Get the optimizer objective function.
     QList<Constraint> *constraints() { return constraints_; } //!< Get the optimizer constraints.
 
