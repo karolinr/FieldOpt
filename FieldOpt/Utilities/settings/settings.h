@@ -55,6 +55,7 @@ public:
     QString driver_path() const { return driver_path_; }
 
     QString name() const { return name_; } //!< The name to be used for the run. Output file and folder names are derived from this.
+    void set_name(const QString &name){ name_ = name; } //!< Set name (used for the run)
     QString output_directory() const { return output_directory_; } //!< Path to a directory in which output files are to be placed.
     bool verbose() const { return verbose_; } //!< Verbose mode (with or without debug printing).
     void set_verbosity(const bool verbosity) { verbose_ = verbosity; }
