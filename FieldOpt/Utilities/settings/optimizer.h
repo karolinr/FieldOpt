@@ -81,8 +81,7 @@ public:
     OptimizerMode mode() const { return mode_; } //!< Get the optimizer mode (maximize/minimize).
     Parameters parameters() const { return parameters_; } //!< Get the optimizer parameters.
     Objective objective() const { return objective_; } //!< Get the optimizer objective function.
- //   ObjectiveType getObjType() const { return type_; } //!< Get the Objective type (e.g. WeightedSum)
-    QList<Constraint> *constraints() const { return constraints_; } //!< Get the optimizer constraints.
+    QList<Constraint> *constraints() { return constraints_; } //!< Get the optimizer constraints.
 
 private:
     Optimizer(QJsonObject json_optimizer);
