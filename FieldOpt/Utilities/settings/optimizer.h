@@ -78,7 +78,9 @@ public:
     };
 
     OptimizerType type() const { return type_; } //!< Get the Optimizer type (e.g. Compass).
+    void set_optimizer_type(const OptimizerType type){ type_ = type; } //!< Set the Optimizer Type
     OptimizerMode mode() const { return mode_; } //!< Get the optimizer mode (maximize/minimize).
+    void set_optimizer_mode(const OptimizerMode mode){ mode_ = mode; } //!< Set the Optimizer mode
     Parameters parameters() { return parameters_; } //!< Get the optimizer parameters.
     Objective objective() const { return objective_; } //!< Get the optimizer objective function.
     QList<Constraint> *constraints() { return constraints_; } //!< Get the optimizer constraints.
