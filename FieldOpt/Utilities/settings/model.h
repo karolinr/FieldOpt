@@ -134,10 +134,12 @@ public:
     };
 
     Reservoir reservoir() const { return reservoir_; } //!< Get the struct containing reservoir settings.
-    void set_reservoir_grid_path(const QString path) { reservoir_.path = path; } //!< Set the reservoir grid path. Used when the path is passed by command line argument.
+    void set_reservoir_grid_path(const QString path) { reservoir_.path = path; } //!< Set the reservoir grid path. Used when the path is passed by command line argument and GUI.
+    void set_reservoir_grid_source_type(const ReservoirGridSourceType grid_type) { reservoir_.type = grid_type; } //!< Set the reservoir grid source type. Used when the type is set through the GUI.
+
     QList<Well> wells() const { return wells_; } //!< Get the struct containing settings for the well(s) in the model.
     QList<int> control_times() const { return control_times_; } //!< Get the control times for the schedule
-
+    void set_control_times(const QList<int> control_times){control_times_ = control_times;}//!< Set the control times through GUI
 private:
     Model(QJsonObject json_model);
     Reservoir reservoir_;
