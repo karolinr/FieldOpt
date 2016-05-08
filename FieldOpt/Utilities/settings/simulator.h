@@ -48,6 +48,7 @@ public:
     SimulatorType type() const { return type_; } //!< Get the simulator type (e.g. ECLIPSE).
     void set_type(const SimulatorType type){ type_ = type; } //!< Set the simulator type
     QStringList *commands() const { return commands_; } //!< Get the simulator commands (commands used to execute a simulation). Each list element is executed in sequence.
+    void set_commands(QStringList *commands){commands_ = commands;}
     QString script_name() const { return script_name_; } //!< Get the name of the script to be used to execute simulations.
     void set_script_name(const QString &script_name){ script_name_ = script_name;} //!< Get the name of the script to be used to execute simulations.
     QString driver_file_path() const { return driver_file_path_; } //!< Get the path to the driver file.
